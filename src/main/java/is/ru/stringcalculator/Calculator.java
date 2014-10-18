@@ -6,8 +6,17 @@ public class Calculator {
 	    if(text.equals("")){
 		    return 0;
 		}
-		else{
-		    return 1;
+	    else if(text.contains(",")){
+		    String[] numbers = text.split(",");
+		    return toInt(numbers[0]) + toInt(numbers[1]);
 		}
+	    else{
+		return 1;
+	    }
 	}
+    //Refactor
+    private static int toInt(String number){
+	return Integer.parseInt(number);
+    }
+
 }
