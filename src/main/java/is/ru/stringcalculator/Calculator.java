@@ -13,13 +13,14 @@ public class Calculator {
 		return 1;
 	    }
 	}
+    
 
     private static int toInt(String number){
 	return Integer.parseInt(number);
     }
 
     private static String[] splitNumbers(String numbers){
-	return numbers.split(",");
+	return numbers.split("[\\n,]");
     }
 
     private static int sum(String[] numbers){
@@ -29,5 +30,4 @@ public class Calculator {
 	}
 	return total;
     }
-
 }
